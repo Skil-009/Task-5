@@ -1,0 +1,41 @@
+1.What is Wireshark used for?
+
+Wireshark is a free, open-source network protocol analyzer (or packet sniffer) used to capture and interactively examine data traveling over a computer network. Its main uses are network troubleshooting, analysis, software and protocol development, and education.
+
+2.What is a packet?
+
+A packet is the basic unit of data that is transferred across a network. It's a formatted block of data, consisting of a header (containing control and addressing information like source and destination IP/MAC addresses) and a payload (the actual user data).
+
+3.How to filter packets in Wireshark?
+
+Use the Display Filter toolbar at the top. Common filters include ip.addr == 192.168.1.1 (by IP), tcp.port == 80 (by port), or http (by protocol).
+
+4.What is the difference between TCP and UDP?
+
+TCP (Transmission Control Protocol) is connection-oriented, providing reliable, ordered, and error-checked delivery of a stream of data. It uses a three-way handshake (SYN, SYN-ACK, ACK) to establish a connection.
+
+UDP (User Datagram Protocol) is connectionless and unreliable. It's faster because it doesn't have the overhead of error-checking and connection setup, making it suitable for applications like video streaming, VoIP, and DNS lookups.
+
+5.What is a DNS query packet?
+
+A DNS (Domain Name System) query packet is typically a UDP packet (on port 53) sent from a client to a DNS server. It requests the IP address corresponding to a human-readable domain name (e.g., asking for the IP address of https://www.google.com/url?sa=E&source=gmail&q=google.com).
+
+6.How can packet capture help in troubleshooting?
+
+It allows an analyst to see exactly what data is being sent and received, enabling them to:
+
+Determine if a network connection is failing (e.g., seeing only SYN packets but no SYN-ACK response).
+
+Identify application-level errors.
+
+Locate slow-performing network devices.
+
+Detect unexpected or unauthorized traffic.
+
+7.What is a protocol?
+
+A protocol is a set of rules and conventions that govern how data is formatted, transmitted, and received between computing devices. Examples include IP, TCP, HTTP, and SMTP.
+
+8.Can Wireshark decrypt encrypted traffic?
+
+By default, no. Wireshark can only see the encrypted packets (like TLS/HTTPS traffic). However, it can be configured to decrypt traffic if you have the appropriate private key and the traffic uses a cipher suite that supports decryption in Wireshark.
